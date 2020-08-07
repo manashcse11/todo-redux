@@ -1,13 +1,8 @@
 import React from 'react';
 import cx from 'classnames';
+import { filters } from '../constants';
 
 const VisibilityFilters = ({ activeFilter }) => {
-    const filters = {
-        "all": "All"
-        , "completed": "Completed"
-        , "incomplete": "Incomplete"
-    };
-
     return (
         <div>
             {Object.keys(filters).map((key) => {
