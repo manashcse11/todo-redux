@@ -8,7 +8,7 @@ const Todo = (props) => {
     const todo = props.todo;
     return (
         <li className="todo-item" onClick={() => {props.toggleTodo(todo.id)}}>
-            <span className={cx("todo-item", todo && todo.completed && "todo-item-completed")}>
+            <span className={cx("todo-item-text", todo && todo.completed && "todo-item-completed")}>
                 {todo.content}
             </span>
         </li>

@@ -38,8 +38,16 @@
 }
 
 .todo-item{
+  border-bottom: 1px solid #eee;
   cursor: pointer;
   line-height: 1.5;
+  list-style-type:none;
+  width:50%;
+  margin: auto;
+}
+
+.todo-item-text{
+  margin: 5px;
 }
 
 .todo-item-completed{
