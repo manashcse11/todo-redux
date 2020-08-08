@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 
-const AddTodo = () => {
+import { connect } from 'react-redux';
+import { addTodo } from '../redux/actions';
+
+const AddTodo = (props) => {
     const [task, setTask] = useState('');
     
     const handleChange = (event) => {
@@ -9,6 +12,8 @@ const AddTodo = () => {
 
     const handleAddTodo = (event) => {
         console.log(task);
+        props.addTodo(task);
+        setTask('');
     }
 
     return (
@@ -19,4 +24,5 @@ const AddTodo = () => {
     );
 }
 
-export default AddTodo;
+// export default AddTodo;
+export default connect(null, { addTodo })(AddTodo);
